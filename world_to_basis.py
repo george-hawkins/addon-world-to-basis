@@ -4,7 +4,7 @@ bl_info = {
     "version": (1, 0),
     "blender": (2, 93, 0),
     "location": "View3D > Sidebar > Item",
-    "description": "Calculate delta between active and selected objects and apply that delta to the basis transform.",
+    "description": "Calculate delta between the active and selected objects and apply it to the basis transform.",
     "warning": "",
     "doc_url": "",
     "category": "Object",
@@ -28,6 +28,8 @@ class WorldToBasisPanel(bpy.types.Panel):
         row.operator("button.copy_world_to_basis")
         
 class ButtonCopyWorldToBasis(bpy.types.Operator):
+    # This docstring (with a period appeneded) becomes the tooltip for the operator.
+    """Calculate the delta between the active and selected objects and apply it to the basis transform"""
     bl_idname = "button.copy_world_to_basis"
     bl_label = "Copy All to Selected"
 
