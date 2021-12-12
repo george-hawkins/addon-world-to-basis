@@ -3,6 +3,8 @@ World to basis - Blender addon
 
 I wanted to be able to set the absolute location and rotation for a camera at a frame other than the first frame. This proved harder than I expected and the tiny addon here is my current solution.
 
+**TLDR;** jump to the [addon](#addon) section.
+
 The issue
 ---------
 
@@ -96,3 +98,14 @@ Going further
 -------------
 
 This started with me wanting to be able to set the current (rather than basis) location, rotation and scale values of an object that was subject to constraints. This addon doesn't provide access to X, Y and Z fields for current location etc. but it gets close. If e.g. don't want to use fSpy at all but want to set the exact location, rotation and scale of your camera at a particular frame then scrub to that frame, create a temporary cube and enter the exact values you want for the camera in the location, rotation and scale fields of the cube. Then select the camera, shift-select the cube and copy over the values as already described - then delete the cube.
+
+Working with the first frame
+----------------------------
+
+Above, I claimed the first frame, in my particular clip, was harder to work with than frame 148. This isn't really true, it's fairly easy to set the vanishing-point axes in frame 1 to get a similar result:
+
+![img.png](images/fspy-frame-1.jpg)
+
+However, working with frame 1, I can't set the origin where I want it, i.e. in the middle of the courtyard.
+
+Note that in this screenshot, I've also ticked _Focal length_ and that the solved length is very close to the 18mm that I actually had the camera set to.
